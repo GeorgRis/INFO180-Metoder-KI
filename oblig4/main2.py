@@ -17,8 +17,6 @@ def spill():
     game = PlayBoardGame()
     # as long as not finished
     while not (game.finished()):
-        # allow person to select starter
-        #game.select_starter()
         game.print_status()
 
         # brint game board and other information
@@ -31,9 +29,7 @@ def spill():
         advanced += 1
     elif res == game.player2.name:
         simple += 1
-# create a game playing object
 
-# allow person to select starter
 
 def noe():
     global advanced
@@ -48,7 +44,7 @@ game = PlayBoardGame()
 
 if __name__ == "__main__":
     noe()
-    print(game.player2.name, "-", advanced, "vs", game.player1.name, "-", simple)
+    print(game.player2.name, "-", advanced, game.player1.name, "-", simple)
 
 
 
