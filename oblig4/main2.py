@@ -13,17 +13,14 @@ advanced = 0
 def spill():
     global advanced
     global simple
-
     game = PlayBoardGame()
     # as long as not finished
     while not (game.finished()):
-        game.print_status()
-
         # brint game board and other information
-
-
+        game.print_status()
         # allow the player in turn to move, either human or computer
         game.select_move()
+     
     res = game.print_result()
     if res == game.player1.name:
         advanced += 1
